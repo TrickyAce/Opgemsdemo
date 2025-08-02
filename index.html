@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OP GEMS - Fashion World</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">OP GEMS</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#products">Collections</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="#cta">Shop Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo"></div>
+            <h1>OP GEMS</h1>
+            <p>Luxury Redefined, Excellence Delivered</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <h2 class="section-title">Our Exclusive Collections</h2>
+        
+        <!-- Rings Category -->
+        <div class="category" id="rings-category">
+            <h3 class="category-title">Rings</h3>
+            <div class="carousel-container">
+                <button class="carousel-nav nav-prev" onclick="changeSlide(-1, 'rings')">‹</button>
+                <div class="carousel" id="rings-carousel">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/Eng.jpeg')"></div>
+                        <h4 class="product-name">Engagement Rings</h4>
+                        <p class="product-price">₦5,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Engagement rings" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/stud.jpeg')"></div>
+                        <h4 class="product-name">Stud Earings Pack</h4>
+                        <p class="product-price">₦2,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Stud Earings Pack" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/pend.jpeg')"></div>
+                        <h4 class="product-name">Earrings and Pendant Set</h4>
+                        <p class="product-price">₦5,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Earrings and Pendant Set" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                <button class="carousel-nav nav-next" onclick="changeSlide(1, 'rings')">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1, 'rings')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'rings')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'rings')"></span>
+                </div>
+            </div>
+            <button class="see-more-btn" onclick="showAllProducts('rings')">See More Rings</button>
+        </div>
+
+        <!-- Rings Grid View -->
+        <div class="grid-view" id="rings-grid">
+            <button class="back-btn" onclick="showCarousel('rings')">← Back to Collections</button>
+                <div class="products-grid">
+                    <div class="grid-product-card">
+                        <div class="product-image" style="background-image: url('images/Eng.jpeg')"></div>
+                        <h4 class="product-name">Engagement Rings</h4>
+                        <p class="product-price">₦5,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Engagement rings" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/stud.jpeg')"></div>
+                    <h4 class="product-name">Stud Earings Pack</h4>
+                    <p class="product-price">₦2,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Stud Earings Pack" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/pend.jpeg')"></div>
+                    <h4 class="product-name">Earrings and Pendant Set</h4>
+                    <p class="product-price">₦5,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Earrings and Pendant Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/knuk.jpeg')"></div>
+                    <h4 class="product-name">Knuckles Rings Set</h4>
+                    <p class="product-price">₦4,500</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Knuckles Rings Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+            </div>
+            <button class="back-btn" onclick="showCarousel('rings')">← Back to Collections</button>
+        </div>
+
+        <!-- Wristwear Category -->
+        <div class="category" id="wristwear-category">
+            <h3 class="category-title">Wristwears</h3>
+            <div class="carousel-container">
+                <button class="carousel-nav nav-prev" onclick="changeSlide(-1, 'wristwear')">‹</button>
+                <div class="carousel" id="wristwear-carousel">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/rolex.jpeg')"></div>
+                        <h4 class="product-name">Rolex Wristwatch</h4>
+                        <p class="product-price">₦25,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Rolex Wristwatch" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/brac.jpeg')"></div>
+                        <h4 class="product-name">Bracelet And Watch</h4>
+                        <p class="product-price">₦6,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Bracelet and watch" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/rolex-w.jpeg')"></div>
+                        <h4 class="product-name">Rolex Wristwatch</h4>
+                        <p class="product-price">₦30,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Rolex Wristwatch" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                <button class="carousel-nav nav-next" onclick="changeSlide(1, 'wristwear')">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1, 'wristwear')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'wristwear')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'wristwear')"></span>
+                </div>
+            </div>
+            <button class="see-more-btn" onclick="showAllProducts('wristwear')">See More Wristwear</button>
+        </div>
+
+        <!-- Wristwear Grid View -->
+        <div class="grid-view" id="wristwear-grid">
+            <button class="back-btn" onclick="showCarousel('wristwear')">← Back to Collections</button>
+            <div class="products-grid">
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/rolex.jpeg')"></div>
+                    <h4 class="product-name">Rolex Wristwatch</h4>
+                    <p class="product-price">₦25,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Rolex Wristwatch" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/brac.jpeg')"></div>
+                    <h4 class="product-name">Bracelet And Watch</h4>
+                    <p class="product-price">₦6,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Bracelet and watch" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/rolex-w.jpeg')"></div>
+                    <h4 class="product-name">Rolex Wristwatch</h4>
+                    <p class="product-price">₦30,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Rolex Wristwatch" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/wwu.jpeg')"></div>
+                    <h4 class="product-name">Unisex Wristwatch</h4>
+                    <p class="product-price">₦30,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Unisex Wristwatch" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+            </div>
+            <button class="back-btn" onclick="showCarousel('wristwear')">← Back to Collections</button>
+        </div>
+
+        <!-- Curated Sets Category -->
+        <div class="category" id="sets-category">
+            <h3 class="category-title">Curated Sets</h3>
+            <div class="carousel-container">
+                <button class="carousel-nav nav-prev" onclick="changeSlide(-1, 'sets')">‹</button>
+                <div class="carousel" id="sets-carousel">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/Cost.jpeg')"></div>
+                        <h4 class="product-name"> Costume Set</h4>
+                        <p class="product-price">₦6,500</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Costume Set" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/gift.jpeg')"></div>
+                        <h4 class="product-name">Men Gift Set</h4>
+                        <p class="product-price">₦40,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Men Gift Set" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('images/red.jpeg')"></div>
+                        <h4 class="product-name">Costume Set</h4>
+                        <p class="product-price">₦5,000</p>
+                        <a href="https://wa.me/2349071441687?text=I'm interested in the Costume Set" class="whatsapp-btn">Order on WhatsApp</a>
+                    </div>
+                </div>
+                <button class="carousel-nav nav-next" onclick="changeSlide(1, 'sets')">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(1, 'sets')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'sets')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'sets')"></span>
+                </div>
+            </div>
+            <button class="see-more-btn" onclick="showAllProducts('sets')">See More Sets</button>
+        </div>
+
+        <!-- Sets Grid View -->
+        <div class="grid-view" id="sets-grid">
+            <button class="back-btn" onclick="showCarousel('sets')">← Back to Collections</button>
+            <div class="products-grid">
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/Cost.jpeg')"></div>
+                    <h4 class="product-name"> Costume Set</h4>
+                    <p class="product-price">₦6,500</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Costume Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/gift.jpeg')"></div>
+                    <h4 class="product-name">Men Gift Set</h4>
+                    <p class="product-price">₦40,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Men Gift Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/red.jpeg')"></div>
+                    <h4 class="product-name">Costume Set</h4>
+                    <p class="product-price">₦5,000</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Costume Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+                <div class="grid-product-card">
+                    <div class="product-image" style="background-image: url('images/knuk.jpeg')"></div>
+                    <h4 class="product-name">Knuckles Rings Set</h4>
+                    <p class="product-price">₦4,500</p>
+                    <a href="https://wa.me/2349071441687?text=I'm interested in the Knuckles Rings Set" class="whatsapp-btn">Order on WhatsApp</a>
+                </div>
+            </div>
+            <button class="back-btn" onclick="showCarousel('sets')">← Back to Collections</button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Absolutely stunning pieces! The quality is exceptional and the customer service is outstanding. My engagement ring from OP GEMS is everything I dreamed of."</p>
+                <p class="testimonial-author">- Sarah Johnson</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"I've been buying from OP GEMS for years. Their curated sets are perfect for special occasions, and the craftsmanship is always top-notch."</p>
+                <p class="testimonial-author">- Michael Chen</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The bridal jewelry set I ordered was even more beautiful in person. OP GEMS made my wedding day extra special. Highly recommended!"</p>
+                <p class="testimonial-author">- Aisha Okoye</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Fast delivery, secure packaging, and gorgeous jewelry. The gold tennis bracelet I bought is my new favorite piece. Thank you OP GEMS!"</p>
+                <p class="testimonial-author">- Rachel Williams</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Section -->
+    <section id="cta" class="cta-section">
+        <h2>Ready to Find Your Perfect Piece?</h2>
+        <p>Connect with us on WhatsApp for personalized recommendations and exclusive offers</p>
+        <a href="https://wa.me/2349071441687?text=Hello! I'm interested in exploring your jewelry collections" class="cta-btn">Start Shopping</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <h4>WhatsApp</h4>
+                <p>+234 907 144 1687</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <h4>Email</h4>
+                <p>oluwatoyinpeace24@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h4>Address</h4>
+                <p>28 Adepoju Street, Apata<br>Ibadan, Oyo, Nigeria, 200273</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📸</div>
+                <h4>Instagram</h4>
+                <p>@op_gems_empire</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://wa.me/2349071441687">WhatsApp</a>
+            <a href="https://instagram.com/op_gems_empire">Instagram</a>
+            <a href="mailto:oluwatoyinpeace24@gmail.com">Email</a>
+        </div>
+        <p>&copy; 2025 OP GEMS(DEMO). All rights reserved. | Luxury Redefined</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
